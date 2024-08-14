@@ -1,0 +1,174 @@
+
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Mohammed Asif Kalathingal} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{{{{\faEnvelope} asifkalathingal@gmail.com}} $|$}
+\textcolor[HTML]{371e77}{{{\faMobile} +358 465349594}}
+
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faGithub} github.com/moasifk}} $|$}
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/moasifk}}}
+\end{tabularx}
+
+\section{Skills}
+\begin{minipage}[b]{0.25\textwidth}
+\raggedright
+\textbf {Programming} \par
+Python, Java \par 
+Javascript, SQL \par
+ML, NLP, MlOps
+\end{minipage}%
+\begin{minipage}[b]{0.25\textwidth}
+\raggedright
+\textbf {Cloud Technologies} \par
+Databricks, Data factory \par
+Synapse, BigQuery, VertexAI \par
+GenAI, LLM, HDInsight, S3
+\end{minipage}%
+\begin{minipage}[b]{0.25\textwidth}
+\raggedleft
+\textbf{Data Techs} \par
+Apache Spark, Kafka, \par Hadoop, Hive  
+Oozie, Airflow \par
+LakeHouse, Modelling
+\end{minipage}
+\begin{minipage}[b]{0.25\textwidth}
+\raggedleft
+\textbf{DevOps \& Others}\par
+Kubernetes, Docker \par 
+Kubeflow   \par 
+GitHubAction
+\end{minipage}
+
+%Experience
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Tata Consultancy Services, Helsinki, Finland}} \hfill \color[HTML]{371e77} Dec 2014 - Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Technical Architect}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item \textbf{Designed and Implemented Big Data Solutions:} Architected and deployed scalable big data solutions using Apache Spark, Kafka and object storage on on-premise and on Azure.
+        \item \textbf{Migration:} Led the migration of a large-scale big data streaming application processing 1TB of data every 5 minutes from MapR Hadoop to open source Hadoop. This migration reduced the required processing infrastructure from 21 nodes to 12 nodes achieving a 40\% cost reduction.
+        \item \textbf{Performance Optimization}: Conducted extensive performance tuning of Spark applications, improving processing efficiency and reducing execution time from 22 hrs to 4 hrs. 
+        \item \textbf{Team Leadership}: Managed a team of 8 developers, providing technical guidance, solutions, designs and fostering a collaborative work environment. 
+        \item \textbf{DevOps Initiatives}: Streamlined the CI/CD pipeline using GitHub Actions, reducing deployment time by 50\%. 
+        \item Spark, Kafka, S3, Airflow, Hadoop, Hbase, Lakehouse, Delta lake, BigQuery, Vertex AI, Kubernetes, Docker, Vertica, GHA
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{{Cognizant Technology Solutions, Kochi, India}} \hfill \color[HTML]{371e77} April 2012 - Dec 2014 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Senior Development Engineer}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Developed a web application for Institutional Administrators to efficiently manage loans and distribution enrollments, significantly reducing paperwork and manual processes.
+        \item Enabled electronic responses to data requests, as well as the review, approval, and validation of transaction requests, improving accuracy and speed.
+        \item Java 1.6, Spring 3.0, Jquery, HTML, JSP, Servlets, REST API, Gradle, Junit       
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{Capgemini, Chennai, India} \hfill \color[HTML]{371e77} April 2010 - April 2012 \\ [4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Developer}} \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Application Development: Developed and maintained various mainframe applications using COBOL, and CICS enhancing functionalities and optimizing performance. 
+        \item Developed a web application to facilitate assessment for organization internal activities.
+        \item Java 1.6, Servlets, Jsp, Sql, HTML, MySQL, COBOL
+    \end{itemize}
+    \end{minipage}
+\end{tabularx}\\[3pt]
+
+% Education
+\section{Education}
+\begin{minipage}[b]{0.5\textwidth}
+\raggedright
+\textbf {CUSAT, Cochin University Of Science and Technology} 
+\end{minipage}%
+\begin{minipage}[b]{0.5\textwidth}
+\raggedleft
+Aug 2005 - Jun 2009 
+\end{minipage} \\
+\\
+Bachelor of Technology in Computer Science and Engineering
+
+
+% Certifications
+\section{Certifications}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Microsoft Certified: Azure Data Engineer Associate - 2023
+        \item Microsoft Certified: Azure Data Fundamentals - 2021
+        \item Confluence Certified Developer for Apache Kafka - 2020
+        \item Implementing Azure Infrastructure Solutions - 2018
+        \item MapR certified Spark Developer - 2017
+        \item IBM Bluemix- Cloud Platform Application development V1 - 2015
+        \item Oracle Certified Professional, Java SE Programmer - 2012
+        \item Oracle Certified Professional, Web Component Developer - 2012
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+\end{document}
